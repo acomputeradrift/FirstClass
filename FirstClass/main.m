@@ -7,11 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNRPerson.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char * argv[])
+{
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        // Create an instance of BNRPerson
+        BNRPerson *mikey = [[BNRPerson alloc] init];
+        BNRPerson *jamie = [[BNRPerson alloc] init];
+        
+        // Give the instance variables interesting values using setters
+        [mikey setWeightInKilos:96];
+        [mikey setHeightInMeters:1.8];
+        jamie.eyeColor = @"blue";
+        
+        // Log the instance variables using the getters
+        float height = [mikey heightInMeters];
+        int weight = [mikey weightInKilos];
+        NSString *eyeColor = [jamie eyeColor];
+        NSLog(@"mikey is %.2f meters tall and weighs %d kilograms with %@ eyes", height, weight, eyeColor);
+        
+        // Log some values using custom methods
+        float bmi = [mikey bodyMassIndex];
+        NSLog(@"mikey has a BMI of %f", bmi);
+        
     }
     return 0;
 }
