@@ -18,8 +18,8 @@ int main(int argc, const char * argv[])
         BNRPerson *jamie = [[BNRPerson alloc] init];
         
         // Give the instance variables interesting values using setters
-        [mikey setWeightInKilos:96];
-        [mikey setHeightInMeters:1.8];
+        mikey.weightInKilos=96;
+        mikey.heightInMeters=1.8;
         jamie.eyeColor = @"blue";
         
         // Log the instance variables using the getters
