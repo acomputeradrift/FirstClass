@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DE3D630210104F1004938BC /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3D62F210104F1004938BC /* BNREmployee.m */; };
 		7DEA0F8420F698F400E43A38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA0F8320F698F400E43A38 /* main.m */; };
 		7DEA0F8C20F6991800E43A38 /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA0F8B20F6991800E43A38 /* BNRPerson.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7DE3D62E210104F1004938BC /* BNREmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNREmployee.h; sourceTree = "<group>"; };
+		7DE3D62F210104F1004938BC /* BNREmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNREmployee.m; sourceTree = "<group>"; };
 		7DEA0F8020F698F400E43A38 /* FirstClass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstClass; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEA0F8320F698F400E43A38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DEA0F8A20F6991800E43A38 /* BNRPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRPerson.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				7DEA0F8320F698F400E43A38 /* main.m */,
+				7DE3D62E210104F1004938BC /* BNREmployee.h */,
+				7DE3D62F210104F1004938BC /* BNREmployee.m */,
 			);
 			path = FirstClass;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE3D630210104F1004938BC /* BNREmployee.m in Sources */,
 				7DEA0F8420F698F400E43A38 /* main.m in Sources */,
 				7DEA0F8C20F6991800E43A38 /* BNRPerson.m in Sources */,
 			);

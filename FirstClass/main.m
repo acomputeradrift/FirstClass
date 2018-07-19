@@ -8,29 +8,44 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRPerson.h"
+#import "BNREmployee.h"
 
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
         
         // Create an instance of BNRPerson
-        BNRPerson *mikey = [[BNRPerson alloc] init];
-        BNRPerson *jamie = [[BNRPerson alloc] init];
+       // BNRPerson *mikey = [[BNRPerson alloc] init];
+     
+        
+        
+        // Create an instance of BNREmployee
+        BNRPerson *mikey = [[BNREmployee alloc] init];
+        
+        // Give properties interesting values using setter methods
+        mikey.weightInKilos = 96;
+        mikey.heightInMeters = 1.8;
+        mikey.eyeColor = @"blue";
+        
+        // Log some properties using getter methods
+        NSLog(@"mikey has a weight of %f", mikey.weightInKilos);
+        NSLog(@"mikey has a height of %f", mikey.heightInMeters);
+        
+        // Log the body mass index
+        float bmi = mikey.bodyMassIndex;
+        NSLog(@"mikey has a BMI of %f", bmi);
+        
         
         // Give the instance variables interesting values using setters
-        mikey.weightInKilos=96;
-        mikey.heightInMeters=1.8;
-        jamie.eyeColor = @"blue";
+        //mikey.weightInKilos=96;
+        //mikey.heightInMeters=1.8;
+       
         
         // Log the instance variables using the getters
-        float height = [mikey heightInMeters];
-        int weight = [mikey weightInKilos];
-        NSString *eyeColor = [jamie eyeColor];
-        NSLog(@"mikey is %.2f meters tall and weighs %d kilograms with %@ eyes", height, weight, eyeColor);
+       
+        NSLog(@"Mikey is %.2f meters tall and weighs %f kilograms with %@ eyes", mikey.heightInMeters, mikey.weightInKilos, mikey.eyeColor);
         
-        // Log some values using custom methods
-        float bmi = [mikey bodyMassIndex];
-        NSLog(@"mikey has a BMI of %f", bmi);
+      
         
     }
     return 0;
