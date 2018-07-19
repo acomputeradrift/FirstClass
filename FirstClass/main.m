@@ -20,12 +20,14 @@ int main(int argc, const char * argv[])
         
         
         // Create an instance of BNREmployee
-        BNRPerson *mikey = [[BNREmployee alloc] init];
+        BNREmployee *mikey = [[BNREmployee alloc] init];
         
         // Give properties interesting values using setter methods
         mikey.weightInKilos = 96;
         mikey.heightInMeters = 1.8;
         mikey.eyeColor = @"blue";
+        mikey.employeeID = 12;
+        mikey.hireDate = [NSDate dateWithNaturalLanguageString:@"Aug 2nd, 2010"];
         
         // Log some properties using getter methods
         NSLog(@"mikey has a weight of %f", mikey.weightInKilos);
@@ -34,6 +36,10 @@ int main(int argc, const char * argv[])
         // Log the body mass index
         float bmi = mikey.bodyMassIndex;
         NSLog(@"mikey has a BMI of %f", bmi);
+        NSLog(@"Employee %u hired on %@", mikey.employeeID, mikey.hireDate);
+        double years = mikey.yearsOfEmployment;
+        NSLog(@"BMI of %.2f, has worked with us for %.2f years", bmi, years);
+
         
         
         // Give the instance variables interesting values using setters
